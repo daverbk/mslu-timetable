@@ -16,6 +16,7 @@ public class Program
 
         var client = new HttpClient(handler);
         
+        client.Timeout = TimeSpan.FromHours(1);
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("*/*"));
         client.DefaultRequestHeaders.Connection.Add("keep-alive");
         
